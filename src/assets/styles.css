@@ -1,0 +1,45 @@
+body {
+    margin: 0;
+    font-family: Roboto, Arial;
+    color: #333;
+}
+
+.button {
+    background: #fff;
+    outline: none;
+    border: 1px solid #dedede;
+    border-radius: 4px;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 16px;
+    transition: .3s;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: #333;
+    margin-right: 8px;
+}
+
+.button:hover {
+    background: #f1f1f1;
+}
+
+.button.alert {
+    color: #fff;
+    background: #d00505;
+    border-color: #d00505;
+}
+
+.button.alert:hover {
+    background: #bf0404;
+}
+
+.button.success {
+    color: #fff;
+    background: #01a001;
+    border-color: #01a001;
+}
+
+.button.success:hover {
+    background: #018901;
+}
