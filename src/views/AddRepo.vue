@@ -59,7 +59,7 @@
                     return false;
                 }
 
-                this.axios.post(`${this.$root.apiUrl}/repos/add`, this.repo)
+                this.axios.post(`${this.$root.apiUrl}/projects`, this.repo)
                     .then(res => {
                         if (res.data.status === 'error') {
                            this.error = res.data.message;

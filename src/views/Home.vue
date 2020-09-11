@@ -34,7 +34,7 @@
         created() {
             this.loading = true;
 
-            this.axios(`${this.$root.apiUrl}/repos/get`)
+            this.axios(`${this.$root.apiUrl}/projects`)
                 .then(res => {
                     this.repositories = res.data;
                 })

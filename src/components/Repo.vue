@@ -25,7 +25,7 @@
                     return false;
                 }
 
-                this.axios.post(`${this.$root.apiUrl}/repos/${id}/remove`)
+                this.axios.delete(`${this.$root.apiUrl}/projects/${id}`)
                     .then(() => {
                         this.$emit('removed', id);
                     })

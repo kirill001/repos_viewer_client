@@ -11,7 +11,7 @@ Vue.use(vueAxios, axios);
 Vue.config.productionTip = false
 
 new Vue({
-  data: {apiUrl: 'http://127.0.0.1:8000'},
+  data: {apiUrl: process.env.VUE_APP_API_URL},
   router,
   store,
   render: h => h(App)

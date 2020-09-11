@@ -48,10 +48,10 @@
             loadCommits() {
                 this.loading = true;
 
-                this.axios(`${this.$root.apiUrl}/repos/${this.repo_id}/commits?page=${this.currentPage}`)
+                this.axios(`${this.$root.apiUrl}/projects/${this.repo_id}/commits?page=${this.currentPage}`)
                     .then(res => {
-                        this.total = res.data.total;
-                        this.commits = res.data.commits;
+                        this.total = res.data.data.total;
+                        this.commits = res.data.data.commits;
                     })
                     .catch(() => {})
                     .then(() => {
@@ -76,7 +76,7 @@
                     return false;
                 }
 
-                this.axios.post(`${this.$root.apiUrl}/repos/${this.repo_id}/commits/remove`, {ids: this.selectedCommits})
+                this.axios.delete(`${this.$root.apiUrl}/projects/${this.repo_id}/commits`, {data: {ids: this.selectedCommits}})
                     .then(() => {
 
                         this.selectedCommits.forEach(id => {
