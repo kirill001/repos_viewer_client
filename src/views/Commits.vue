@@ -63,6 +63,8 @@
                 this.loadCommits();
             },
             toggleCommit(id) {
+
+
                 const index = this.selectedCommits.indexOf(id);
 
                 if (index > -1) {
